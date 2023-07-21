@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/images/bulb-off.jfif" id="bulb" alt="not found" width="200px" height="200px"><br>
+    <button onclick="myFunction()">click</button>
+    <script>
+var image=document.getElementById("bulb");
+function myFunction(){
+    if(document.getElementById("bulb").src="/images/bulb-off.jfif")
+    {
+        document.getElementById("bulb").src="/images/bulb-on.jfif";
+    }
+    else
+    {
+        document.getElementById("bulb").src="/images/bulb-off.jfif";
+    }
+}
+    </script>
+</body>
+</html>

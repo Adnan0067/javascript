@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body style="background-color: gray;"> 
+    <h1 style="color: aliceblue;">Form Validation</h1>
+<div class="form-floating mb-3">
+
+  <input type="text" class="form-control mt-3" id="uname" onkeyup="clearmsg('sp1')">
+  <label for="floatingInput">Name</label>
+  <span id="sp1" style="color: red;"></span>
+</div>
+<div class="form-floating mb-3">
+    
+  <input type="number" class="form-control mt-3" id="age" placeholder="age" onkeyup="clearmsg('sp2')">
+  <label for="floatingInput">Age</label>
+  <span id="sp2" style="color: red;"></span>
+</div>
+    <div class="form-floating mb-3">
+
+  <input type="email" class="form-control" id="mail" placeholder="name@example.com" onkeyup="clearmsg('sp3')">
+<label for="floatingInput">Email address</label>
+  <span id="sp3" style="color: red;"></span>
+</div>
+<div class="form-floating">
+  <input type="password" class="form-control" id="pass" placeholder="Password" onkeyup="clearmsg('sp4')">
+  <label for="floatingPassword">Password</label>
+  <span id="sp4" style="color: red;"></span>
+</div>
+<div class="form-floating ">
+    <label for="floatingInput">Ph Number</label>
+  <input type="number" class="form-control mt-3" id="phn" placeholder="number" onkeyup="clearmsg('sp5')">
+  <label for="floatingInput">Ph Number</label>
+  <span id="sp5" style="color: red;"></span>
+</div>
+<div class="form-floating mb-3">
+  <input type="text" class="form-control mt-3" id="add" placeholder="address" onkeyup="clearmsg('sp6')">
+  <label for="floatingInput">Address</label>
+  <span id="sp6" style="color: red;"></span>
+</div>
+<div class="d-grid gap-2 col-6 mx-auto mt-3">
+  <button class="btn btn-primary" type="button" onclick="valid()">SUBMIT</button>
+
+
+
+  <script>
+    function valid(){
+        let a = document.getElementById("uname").value;
+        if(a=="")
+        {
+            document.getElementById("sp1").innerHTML="  Text not entered";
+            return false;
+         
+        }
+        let b = document.getElementById("age").value;
+        if(b=="")
+        {
+            document.getElementById("sp2").innerHTML="  Age not entered";
+            return false;
+        }
+        let c = document.getElementById("mail").value;
+        if(c=="")
+        {
+            document.getElementById("sp3").innerHTML="  Email not entered";
+            return false;
+        }
+        let d = document.getElementById("pass").value;
+        if(d=="")
+        {
+            document.getElementById("sp4").innerHTML="  Password not entered";
+        return false;
+        }
+        let e = document.getElementById("phn").value;
+        if(e=="")
+        {
+            document.getElementById("sp5").innerHTML="  Phone Number not entered";
+        return false;
+        }
+        let f = document.getElementById("add").value;
+        if(f=="")
+        {
+            document.getElementById("sp6").innerHTML="  Address not entered";
+        return false;
+        }
+        
+    }
+    function clearmsg(sp){
+document.getElementById(sp).innerHTML="";
+    }
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

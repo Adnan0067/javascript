@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="obj">Hello World</h1>
+    <script>
+        var a= document.getElementById("obj");
+        a.addEventListener('mouseover',function handleMouseover(){
+          a.style.color="red";
+          
+
+        })
+        a.addEventListener('mouseout',function handleMouseout(){
+          a.style.color="black";
+        })
+    </script>
+</body>
+</html>
